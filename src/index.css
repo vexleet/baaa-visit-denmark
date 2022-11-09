@@ -87,3 +87,33 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.MuiStep-root {
+  opacity: 0;
+}
+
+.MuiStep-root:nth-child(1) {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.MuiStep-root:nth-child(3) {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.MuiStep-root:nth-child(5) {
+  animation: fadeIn 0.5s ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
