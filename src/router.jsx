@@ -5,6 +5,7 @@ import Lunch from './pages/Lunch.jsx';
 import Dinner from './pages/Dinner.jsx';
 import Breakfast from './pages/Breakfast.jsx';
 import Activities from './pages/Activities.jsx';
+import Plan from './pages/Plan.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,12 @@ const router = createBrowserRouter([
   {
     path: '/activities',
     element: <Activities />
+  },
+  {
+    path: '/plan',
+    element: <Plan />
   }
+  
 ]);
 
 export default router;
