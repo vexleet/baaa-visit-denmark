@@ -2,7 +2,11 @@ import { createTheme } from '@mui/material';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'VisitDenmarkRegular, Roboto, Arial'
+    fontFamily: 'VisitDenmarkRegular, Roboto, Arial',
+    button: {
+      textTransform: 'none'
+    }
+  
   },
   shape: {
     borderRadius: 0
@@ -22,3 +26,4 @@ const theme = createTheme({
 });
 
 export default theme;
+
