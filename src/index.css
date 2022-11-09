@@ -5,6 +5,20 @@
   src: url(./assets/fonts/VisitDenmark-Regular.otf) format('opentype');
 }
 
+@font-face {
+  font-family: 'VisitDenmarkMedium';
+  font-style: normal;
+  font-weight: 600;
+  src: url(./assets/fonts/VisitDenmark-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'VisitDenmarkBold';
+  font-style: normal;
+  font-weight: 700;
+  src: url(./assets/fonts/VisitDenmark-Bold.otf) format('opentype');
+}
+
 :root {
   font-family: 'VisitDenmarkRegular', Arial, sans-serif;
   font-size: 16px;
