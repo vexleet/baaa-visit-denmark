@@ -31,7 +31,6 @@ const steps = [
 ];
 
 export default function Plan() {
-
   return (
     <Box sx={{ maxWidth: 400, textAlign: "left" }}>
         <Typography mb="0.8rem" variant='h1' fontSize="2rem">Your plan for today!</Typography>
