@@ -1,10 +1,12 @@
-import {createTheme} from "@mui/material";
-import VisitDenmarkRegular from "./assets/fonts/VisitDenmark-Regular.otf";
+import { createTheme } from '@mui/material';
 
 const theme = createTheme({
   typography: {
-    fontFamily: 'VisitDenmarkRegular, Roboto, Arial',
+    fontFamily: 'VisitDenmarkRegular, Roboto, Arial'
   },
+  shape: {
+    borderRadius: 0
+  }
   // components: {
   //   MuiCssBaseline: {
   //     styleOverrides: `
@@ -17,6 +19,6 @@ const theme = createTheme({
   //     `,
   //   },
   // }
-})
+});
 
 export default theme;
