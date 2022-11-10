@@ -8,7 +8,14 @@ function Breakfast() {
   };
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+    <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', 
+    backgroundImage: "url(breakfast-bg.png)",
+    height: "100vh",
+    width:"100%",
+    backgroundPosition: 'center',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat'}}>
+
       <Typography style={{ fontSize: '1.5rem', marginTop: '-10rem', padding: '3rem' }}>
         How would you like your breakfast?
       </Typography>
