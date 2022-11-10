@@ -23,7 +23,7 @@ function Breakfast() {
       <Button
         onClick={handleClick}
         style={{
-          backgroundColor: active ? '#e70013' : 'white',
+          backgroundColor: active ? '#e70013' : 'red',
 
           alignContent: 'center',
           alignSelf: 'center',
@@ -50,10 +50,6 @@ function Breakfast() {
         variant="contained">
         I prefer brunch
       </Button>
-
-      <Typography style={{ alignContent: 'center', alignSelf: 'center', marginTop: '1rem' }}>
-        or
-      </Typography>
 
     <Typography style={{alignContent:"center", alignSelf:"center", marginTop:"1rem", color:"white"}}>or</Typography>
 
