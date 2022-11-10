@@ -1,21 +1,69 @@
 import { Typography, Button } from '@mui/material';
+import React, { useState } from 'react';
 
-const Breakfast = () => {
+function Breakfast() {
+  const [active, setActive] = useState(false);
+  const handleClick = () => {
+    setActive(!active);
+  };
+
   return (
-    <div style={{display:"flex", justifyContent:"center", flexDirection:"column"}}>
-    <Typography style={{fontSize:"1.5rem", marginTop:"-10rem", padding:"3rem"}}>How would you like your breakfast?</Typography>
+    <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
+      <Typography style={{ fontSize: '1.5rem', marginTop: '-10rem', padding: '3rem' }}>
+        How would you like your breakfast?
+      </Typography>
 
-    <Button style={{alignContent:"center", alignSelf:"center", backgroundColor:"white", color:"#022B52", width:"17rem", height:"4rem", marginTop:"2rem"}} variant="contained">I love early breakfast</Button>
+      <Button
+        onClick={handleClick}
+        style={{
+          backgroundColor: active ? '#e70013' : 'white',
 
-    <Button style={{alignContent:"center", alignSelf:"center",backgroundColor:"white", color:"#022B52", width:"17rem", height:"4rem", marginTop:"1.5rem"}} variant="contained">I prefer brunch</Button>
+          alignContent: 'center',
+          alignSelf: 'center',
+          backgroundColor: 'white',
+          color: '#022B52',
+          width: '17rem',
+          height: '4rem',
+          marginTop: '2rem'
+        }}
+        variant="contained">
+        I love early breakfast
+      </Button>
 
-    <Typography style={{alignContent:"center", alignSelf:"center", marginTop:"1rem"}}>or</Typography>
+      <Button
+        style={{
+          alignContent: 'center',
+          alignSelf: 'center',
+          backgroundColor: 'white',
+          color: '#022B52',
+          width: '17rem',
+          height: '4rem',
+          marginTop: '1.5rem'
+        }}
+        variant="contained">
+        I prefer brunch
+      </Button>
 
-    <Button style={{alignContent:"center", alignSelf:"center", backgroundColor:"white", color:"#022B52", width:"17rem", height:"4rem"}} variant="contained">No breakfast</Button>
-    
-    <Button>Next</Button>
+      <Typography style={{ alignContent: 'center', alignSelf: 'center', marginTop: '1rem' }}>
+        or
+      </Typography>
+
+      <Button
+        style={{
+          alignContent: 'center',
+          alignSelf: 'center',
+          backgroundColor: 'white',
+          color: '#022B52',
+          width: '17rem',
+          height: '4rem'
+        }}
+        variant="contained">
+        No breakfast
+      </Button>
+
+      <Button>Next</Button>
     </div>
-  )
-};
+  );
+}
 
 export default Breakfast;
