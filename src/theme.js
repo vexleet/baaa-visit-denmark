@@ -1,12 +1,22 @@
 import { createTheme } from '@mui/material';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#E70013'
+    },
+    secondary: {
+      main: '#022B52'
+    },
+    white: {
+      main: '#fff'
+    }
+  },
   typography: {
     fontFamily: 'VisitDenmarkRegular, Roboto, Arial',
     button: {
       textTransform: 'none'
     }
-  
   },
   shape: {
     borderRadius: 0
@@ -26,4 +36,3 @@ const theme = createTheme({
 });
 
 export default theme;
-
