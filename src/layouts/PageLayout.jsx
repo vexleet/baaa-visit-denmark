@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import CardImage from '../components/CardImage/index.jsx';
 import styled from '@emotion/styled';
+import { usePreferencesContext } from '../context/PreferencesContext.jsx';
 
 const PageLayoutContainer = styled(Container)((props) => ({
   background: `url(${props.image}) center no-repeat;`,
@@ -15,6 +16,8 @@ const NextButton = styled(Button)`
 `;
 
 const PageLayout = ({ children, title, image, onNextPage, onBackPage }) => {
+  const { activePage } = usePreferencesContext();
+
   return (
     <PageLayoutContainer image={image}>
       <Box pt={3} pb={5} display="flex" flexDirection="column" height="-webkit-fill-available">
@@ -23,7 +26,7 @@ const PageLayout = ({ children, title, image, onNextPage, onBackPage }) => {
             Back
           </Typography>
           <Typography variant="body1" color="#fff">
-            3/5
+            {activePage}/5
           </Typography>
           <Typography variant="body1" onClick={onNextPage} color="#fff">
             Skip
