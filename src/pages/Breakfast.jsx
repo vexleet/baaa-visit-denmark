@@ -17,7 +17,7 @@ export default function Breakfast() {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'}}>
 
-      <Typography style={{ fontSize: '1.5rem', marginTop: '-10rem', padding: '3rem' }}>
+      <Typography style={{ fontSize: '1.5rem', marginTop: '-14rem', padding: '3rem' }}>
         How would you like your breakfast?
       </Typography>
 
