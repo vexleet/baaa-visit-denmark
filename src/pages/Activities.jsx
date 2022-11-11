@@ -1,33 +1,37 @@
 import { Box, Container, Typography } from '@mui/material';
 import CardImage from '../components/CardImage/index.jsx';
 import { useState } from 'react';
+import styled from '@emotion/styled';
+import PageLayout from '../layouts/PageLayout.jsx';
+
+const ActivitiesContainer = styled(Container)`
+  background: url(activities-bg.png) center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+`;
 
 const Activities = () => {
   const activitiesList = [
     {
       title: 'Art seeing',
-      imgSrc:
-        'https://files.guidedanmark.org/files/484/176379_Juleshopping-i-Latinerkvarteret-i-Aarhus.jpg'
+      imgSrc: 'art-seeing.png'
     },
     {
       title: 'Aarhus on 2 wheels',
-      imgSrc:
-        'https://files.guidedanmark.org/files/484/176379_Juleshopping-i-Latinerkvarteret-i-Aarhus.jpg'
+      imgSrc: 'aarhus-2-wheels.png'
     },
     {
-      title: 'Art seeing',
-      imgSrc:
-        'https://files.guidedanmark.org/files/484/176379_Juleshopping-i-Latinerkvarteret-i-Aarhus.jpg'
+      title: 'Outdoor',
+      imgSrc: 'outdoor.png'
     },
     {
-      title: 'Art seeing',
-      imgSrc:
-        'https://files.guidedanmark.org/files/484/176379_Juleshopping-i-Latinerkvarteret-i-Aarhus.jpg'
+      title: 'Libraries',
+      imgSrc: 'libraries.png'
     },
     {
-      title: 'Art seeing',
-      imgSrc:
-        'https://files.guidedanmark.org/files/484/176379_Juleshopping-i-Latinerkvarteret-i-Aarhus.jpg'
+      title: 'Theatre & Cinema',
+      imgSrc: 'theatre.png'
     }
   ];
 
@@ -36,25 +40,38 @@ const Activities = () => {
   const toggleSelectActivity = (index) => {
     const indexOfSelectedActivity = selectedActivities.indexOf(index);
 
-    if (!indexOfSelectedActivity) {
+    if (indexOfSelectedActivity === -1) {
       setSelectedActivities((prevState) => [...prevState, index]);
     } else {
+      setSelectedActivities((prevState) => {
+        const slicedState = prevState.slice();
+        slicedState.splice(indexOfSelectedActivity, 1);
+        return slicedState;
+      });
     }
   };
 
+  const cardIsSelected = (index) => {
+    return selectedActivities.includes(index);
+  };
+
   return (
-    <Container>
-      <Typography variant="h6" textAlign="center" mb={2}>
-        What activities would you like to experience?
+    <PageLayout title="What activities would you like to experience?" image="activities-bg.png">
+      <Typography variant="body1" my={2} color="#fff">
+        {selectedActivities.length > 0 ? `${selectedActivities.length} selected` : <>&nbsp;</>}
       </Typography>
       <Box display="flex" justifyContent="space-between" flexWrap="wrap" gap={1}>
         {activitiesList.map((activity, index) => (
-          <Box key={index}>
-            <CardImage title={activity.title} img={activity.imgSrc} />
+          <Box key={index} onClick={() => toggleSelectActivity(index)}>
+            <CardImage
+              title={activity.title}
+              img={activity.imgSrc}
+              isSelected={cardIsSelected(index)}
+            />
           </Box>
         ))}
       </Box>
-    </Container>
+    </PageLayout>
   );
 };
 

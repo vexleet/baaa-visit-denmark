@@ -7,6 +7,9 @@ const theme = createTheme({
     },
     secondary: {
       main: '#022B52'
+    },
+    white: {
+      main: '#fff'
     }
   },
   typography: {
@@ -14,7 +17,6 @@ const theme = createTheme({
     button: {
       textTransform: 'none'
     }
-  
   },
   shape: {
     borderRadius: 0
@@ -34,4 +36,3 @@ const theme = createTheme({
 });
 
 export default theme;
-
