@@ -1,6 +1,14 @@
 import { createTheme } from '@mui/material';
 
 const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#E70013'
+    },
+    secondary: {
+      main: '#022B52'
+    }
+  },
   typography: {
     fontFamily: 'VisitDenmarkRegular, Roboto, Arial',
     button: {
