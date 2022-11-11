@@ -13,16 +13,16 @@ const WelcomePage = () => {
   <img
         src={`logo.svg`}
         alt="visitDenmark logo"
-        style={{width:"350px", height:"350px", marginTop:"-50px"}}
+        style={{width:"250px", height:"250px", marginTop:"-50px"}}
   ></img>
-  <div>
+  <div style={{marginTop:"2rem"}}>
     <Typography style={{ fontSize:"2.3rem", color:"white"}}>Welcome!</Typography>
     <Typography style={{ fontSize:"1.2rem", padding:"20px", color:"white"}}>Denmark has everything you love; beautiful nature, exciting culture and wild activities. Denmark has it all 
     - the hard part is choosing what to experience. <br></br> <br></br>Plan out your day in Aarhurs here!
     </Typography>
   </div>
 
-  <a href="/breakfast"><Button style={{marginTop:"4rem", backgroundColor:"#E70013", color:"white"}} variant="contained">Plan your day</Button></a>
+  <a href="/breakfast"><Button style={{marginTop:"8rem", backgroundColor:"#E70013", color:"white"}} variant="contained">Plan your day</Button></a>
 
     </div>
 
