@@ -18,10 +18,10 @@ const CardImageWrapper = styled(Box)`
     background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.6) 50%,
-      rgba(0, 0, 0, 0.4) 70%,
-      rgba(0, 0, 0, 0.2) 90%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0.6) 15%,
+      rgba(0, 0, 0, 0.4) 23%,
+      rgba(0, 0, 0, 0.2) 27%,
+      rgba(0, 0, 0, 0) 29%
     );
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@ const CardImage = ({ title, img, isSelected = false }) => {
       display="flex"
       alignItems="flex-end"
       position="relative"
-      width={"100%"}
+      width={180}
       height={160}>
       <AbsoluteImg src={img} />
       {isSelected && <CheckedIcon color="#fff" fontSize="large" />}

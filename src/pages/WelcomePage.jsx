@@ -35,7 +35,15 @@ const WelcomePage = () => {
 
       <Link to="/breakfast">
         <Button
-          style={{ marginTop: '8rem', backgroundColor: '#E70013', color: 'white' }}
+            style={{
+              backgroundColor: '#e70013',
+              color: 'white',
+              alignContent: 'center',
+              alignSelf: 'center',
+              width: '17rem',
+              height: '4rem',
+              marginTop: '1.5rem'
+            }}
           variant="contained">
           Plan your day
         </Button>
