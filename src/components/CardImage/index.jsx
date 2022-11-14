@@ -49,8 +49,8 @@ const CardImage = ({ title, img, isSelected = false }) => {
       display="flex"
       alignItems="flex-end"
       position="relative"
-      width={180}
-      height={130}>
+      width={"100%"}
+      height={160}>
       <AbsoluteImg src={img} />
       {isSelected && <CheckedIcon color="#fff" fontSize="large" />}
 

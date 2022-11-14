@@ -87,7 +87,7 @@ const Lunch = () => {
         <Typography variant="body1" my={2} color="#fff">
           {selectedItems?.length > 0 ? `${selectedItems?.length} selected` : <>&nbsp;</>}
         </Typography>
-        <Box display="flex" justifyContent="space-between" flexWrap="wrap" gap={1}>
+        <Box display="flex" flexDirection="column" flexWrap="wrap" gap={1}>
           {placesToEatList.map((place, index) => (
             <Box key={index} onClick={() => toggleSelectActivity(place.value)}>
               <CardImage
