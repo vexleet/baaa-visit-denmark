@@ -26,22 +26,22 @@ const Lunch = () => {
     {
       title: 'Café',
       value: 'cafe',
-      imgSrc: 'art-seeing.png'
+      imgSrc: 'cafe.png'
     },
     {
       title: 'Restaurants',
       value: 'restaurants',
-      imgSrc: 'aarhus-2-wheels.png'
+      imgSrc: 'restaurant.png'
     },
     {
       title: 'Local specialties',
       value: 'local',
-      imgSrc: 'outdoor.png'
+      imgSrc: 'local.png'
     },
     {
       title: 'Night Life and Clubs',
       value: 'night-life',
-      imgSrc: 'libraries.png'
+      imgSrc: 'bars.png'
     }
   ];
 
