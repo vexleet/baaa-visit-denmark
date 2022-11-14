@@ -21,7 +21,8 @@ const PreferencesContext = createContext({
 export const PreferencesProvider = ({ children }) => {
   const initialState = {
     breakfast: '',
-    lunch: '',
+    lunch: [],
+    dinner: [],
     activities: []
   };
 
