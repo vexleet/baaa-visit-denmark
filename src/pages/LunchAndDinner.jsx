@@ -11,9 +11,9 @@ const Lunch = () => {
   const {
     updateActivePage,
     updatePreference,
-    selectedPreferences: { lunch, dinner }
+    selectedPreferences: { lunch }
   } = usePreferencesContext();
-
+  
   const { toggleSelectActivity, selectedItems, itemIsSelected, setSelectedItems } =
     useSelectItems();
 

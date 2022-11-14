@@ -30,7 +30,6 @@ export const PreferencesProvider = ({ children }) => {
   const [activePage, setActivePage] = useState(0);
 
   const updatePreference = (key, value) => {
-    console.log(key, value);
     setSelectedPreferences((prevState) => ({ ...prevState, [key]: value }));
   };
 
